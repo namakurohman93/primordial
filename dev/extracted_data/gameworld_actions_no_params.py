@@ -247,7 +247,8 @@ actions = {
         "changeTradeRouteStatus": {},
         "deleteTradeRoute": {},
         "getOfferList": {},
-        "checkTarget": {}
+        "checkTarget": {},
+        "sendResources": {}
     },
     "farmList": {
         "deleteList": {},
