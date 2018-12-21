@@ -1,7 +1,7 @@
 import json
 from sys import argv
 from time import time
-from extracted_data import gameworld_actions
+from fabricated_gameworld_actions import actions
 
 
 def get_type_default(param):
@@ -111,7 +111,7 @@ def convert_to_dict(entries):
 
 
 def compare(new_data):
-    existing_data = gameworld_actions.actions
+    existing_data = actions
     result = {}
 
     # Check for new controllers
