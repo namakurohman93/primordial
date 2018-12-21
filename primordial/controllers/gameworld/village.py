@@ -61,6 +61,6 @@ class Village(Controller):
                     "villageId": 0
                 }
             }
-        },
+        }
 
         Controller.__init__(self, post_handler=post_handler, controller='village', actions=actions)

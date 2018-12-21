@@ -70,6 +70,6 @@ class Kingdom(Controller):
             "cancelKingdom": {
                 "params": {}
             }
-        },
+        }
 
         Controller.__init__(self, post_handler=post_handler, controller='kingdom', actions=actions)
