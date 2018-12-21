@@ -226,6 +226,7 @@ response = gameworld.reports.getLastReports(params={'collection': ' ', 'start': 
 |              |createOffer                             |
 |              |cancelOffer                             |
 |              |getOfferList                            |
+|              |sendResources                           |
 |ranking       |getKingdomInternalRanking               |
 |              |getKingdomVictoryPointsWithTreasures    |
 |              |getKingdomStats                         |

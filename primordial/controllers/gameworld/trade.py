@@ -52,6 +52,19 @@ class Trade(Controller):
                     "offerId": 0,
                     "villageId": 0
                 }
+            },
+            "sendResources": {
+                "params": {
+                    "destVillageId": 0,
+                    "recurrences": 0,
+                    "resources": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "sourceVillageId": 0
+                }
             }
         }
 

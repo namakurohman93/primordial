@@ -647,7 +647,18 @@ actions = {
         "acceptOffer": {
             "offerId": 0,
             "villageId": 0
-        }
+        },
+        "sendResources": {
+            "destVillageId": 0,
+            "recurrences": 0,
+            "resources": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "sourceVillageId": 0
+            }
     },
     "ranking": {
         "getKingdomVictoryPointsWithTreasures": {
