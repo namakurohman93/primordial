@@ -1,0 +1,11 @@
+The following procedure was used to figure out and extract all available gameworld and lobby
+actions
+
+    1. Parse game.js for Travian.request() and Travian.writeRequest() function calls. Each call
+    will contain the first parameter in the form of "controller/action". Regex those out, remove
+    duplicates and stack into a dict in the form of
+    {'controller': {'action1': {}, 'action2': {}}}
+    3. Using a browser of your choice invoke as many or as few actions in the gameworld and save
+    the network logs as a .HAR file
+    4. Run action_extractor.py, which will take the .HAR file and produce a result<timestamp>.json
+    file with all the new (compared to gameworld_actions.py) controllers and actions that it found

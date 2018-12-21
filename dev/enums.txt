@@ -1,0 +1,1237 @@
+Friend.STATUS_NOT_AVAILABLE = -1
+Friend.STATUS_OFFLINE = 0
+Friend.STATUS_ONLINE = 1
+Friend.STATUS_AFK = 2
+
+ChatUser.STATUS_NOT_AVAILABLE = -1
+ChatUser.STATUS_OFFLINE = 0
+ChatUser.STATUS_ONLINE = 1
+ChatUser.STATUS_AFK = 2
+
+ChatRoomUser.STATUS_NOT_AVAILABLE = -1
+ChatRoomUser.STATUS_OFFLINE = 0
+ChatRoomUser.STATUS_ONLINE = 1
+ChatRoomUser.STATUS_AFK = 2
+
+ChatRoom.TYPE_PRIVATE = 1
+ChatRoom.TYPE_GROUP = 3
+ChatRoom.TYPE_PUBLIC = 4
+ChatRoom.TYPE_KINGDOM = 5
+ChatRoom.TYPE_SECRET_SOCIETY = 7
+
+ChatRoom.GLOBAL = ChatRoom.TYPE_PUBLIC + '.global'
+ChatRoom.BEGINNER = ChatRoom.TYPE_PUBLIC + '.beginner'
+
+ChatNotification.PLAYER_JOINED = 1
+ChatNotification.PLAYER_LEFT = 2
+ChatNotification.PLAYER_ONLINE = 3
+ChatNotification.PLAYER_OFFLINE = 4
+
+Village.TYPE_NORMAL = 0
+Village.TYPE_MAIN = 1
+Village.TYPE_TOWN = 2
+Village.TYPE_MAIN_TOWN = 3
+Village.TYPE_WORLD_WONDER_VILLAGE = 4
+Village.TYPE_ROBBER_VILLAGE = 5
+Village.TYPE_GOVERNOR_NPC_VILLAGE = 6
+Village.TYPE_WORLD_WONDER_TOWN = 7
+Village.TYPE_KINGDOM_ROBBER = 8
+
+Village.TYPE_OASIS = 10
+
+Village.COLLECTION_OWN = 'own'
+Village.COLLECTION_KINGDOM = 'kingdom'
+Village.COLLECTION_NPCS = 'npc'
+Village.COLLECTION_SOCIETY = 'society'
+
+Village.PRODUCTION_TYPE_BUILDING = 1
+Village.PRODUCTION_TYPE_OASIS = 2
+Village.PRODUCTION_TYPE_HERO = 3
+Village.PRODUCTION_TYPE_TREASURES = 5
+Village.PRODUCTION_TYPE_GOLD = 6
+Village.PRODUCTION_TYPE_OASIS_TROOPS = 7
+
+Village.OASIS_STATUS_NO_OASIS = 0
+Village.OASIS_STATUS_OCCUPIED = 1
+Village.OASIS_STATUS_WILD = 3
+
+TroopsMovementInfo.COLLECTION_ATTACK_VILLAGE = "attackVillage"
+
+Troops.STATUS_HOME = 'home'
+Troops.STATUS_TRANSIT = 'transit'
+Troops.STATUS_SUPPORT = 'support'
+Troops.STATUS_TRAP = 'trap'
+
+Troops.COLLECTION_STATIONARY = 'stationary'
+Troops.COLLECTION_MOVING = 'moving'
+Troops.COLLECTION_TRAPPED = 'trapped'
+Troops.COLLECTION_ELSEWHERE = 'elsewhere'
+Troops.COLLECTION_ALL = 'all'
+
+Troops.MOVEMENT_TYPE_ATTACK = 3
+Troops.MOVEMENT_TYPE_RAID = 4
+Troops.MOVEMENT_TYPE_SUPPORT = 5
+Troops.MOVEMENT_TYPE_SPY = 6
+Troops.MOVEMENT_TYPE_TRANSPORT = 7
+Troops.MOVEMENT_TYPE_RETURN = 9
+Troops.MOVEMENT_TYPE_SETTLE = 10
+Troops.MOVEMENT_TYPE_TRIBUTE_COLLECT = 12
+Troops.MOVEMENT_TYPE_ADVENTURE = 20
+Troops.MOVEMENT_TYPE_RETURN_ADVENTURE = 27
+Troops.MOVEMENT_TYPE_TRANSPORT_RETURN = 33
+Troops.MOVEMENT_TYPE_REGENERATION = 36
+Troops.MOVEMENT_TYPE_SIEGE = 47
+Troops.MOVEMENT_TYPE_TREASURE_RESOURCES = 50
+
+Troops.TYPE_RAM = 7
+Troops.TYPE_CATAPULT = 8
+Troops.TYPE_LEADER = 9
+Troops.TYPE_SETTLER = 10
+Troops.TYPE_HERO = 11
+
+Troops.TYPE_TRAPS = 79
+
+Troops.SECOND_TARGET_CATAPULTS = 20
+
+Troops.MAX_LEVEL = 20
+
+Troops.MOVEMENT_ICON = {}
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_ATTACK] = 'movement_attack_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_SIEGE] = 'movement_attack_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_RAID] = 'movement_attack_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_SUPPORT] = 'movement_support_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_SPY] = 'movement_spy_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_TRANSPORT] = 'movement_trade_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_RETURN] = 'movement_support_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_SETTLE] = 'movement_settle_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_TRIBUTE_COLLECT] = 'movement_tribute_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_ADVENTURE] = 'movement_adventure_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_RETURN_ADVENTURE] = 'movement_support_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_TRANSPORT_RETURN] = 'movement_trade_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_REGENERATION] = 'movement_heal_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_TREASURE_RESOURCES] = 'movement_trade_small_flat_black'
+
+Travian.htmlFilters.i18ndt = '<span i18ndt="{{_?_}}" format="mediumTime"></span>'
+Travian.htmlFilters.i18ndtshort = '<span i18ndt="{{_?_}}" format="short"></span>'
+Travian.htmlFilters.i18ndtdate = '<span i18ndt="{{_?_}}" format="shortDate"></span>'
+Travian.htmlFilters.i18ndtMediumDate = '<span i18ndt="{{_?_}}" format="mediumDate"></span>'
+Travian.htmlFilters.i18ndtOffset = '<span i18ndt="{{_?_}}" format="mediumTime" fast-offset="true"></span>'
+Travian.htmlFilters.countdown = '<span countdown="{{_?_}}" callback="{{_?_}}"></span>'
+Travian.htmlFilters.bold = {tag:"b"}
+Travian.htmlFilters.r = "<br />"
+Travian.htmlFilters.itemStart = "<li>"
+Travian.htmlFilters.itemEnd = "</li>"
+Travian.htmlFilters.playerLink = '<player-link class="truncated" playerId="{{_?_}}" playerName="{{_?_}}" nolink="{{_?_}}" showMissingLink="true"></player-link>'
+Travian.htmlFilters.villageLink = '<village-link class="truncated" villageId="{{_?_}}" villageName="{{_?_}}" nolink="{{_?_}}" showMissingLink="true"></village-link>'
+Travian.htmlFilters.kingdomLink = '<kingdom-link class="truncated" kingdomId="{{_?_}}" nolink="{{_?_}}" showMissingLink="true"></kingdom-link>'
+Travian.htmlFilters.troopLink = '<troop-link trooptype="{{_?_}}"></troop-link>'
+Travian.htmlFilters.buildingLink = '<building-link building-type="{{_?_}}"></building-link>'
+Travian.htmlFilters.icon = '<i class="icon {{_?_}}"></i>'
+Travian.htmlFilters.windowLink = '<translate clickable="openWindow(\'_?_\', {}, null, true)" class="textLink">_?_</translate>'
+Travian.htmlFilters.functionLink = '<translate clickable="{{_?_}}" class="textLink">_?_</translate>'
+Travian.htmlFilters.coords = '<coordinates x="{{_?_}}" y="{{_?_}}"></coordinates>'
+Travian.htmlFilters.plainCoords = '<coordinates x="{{_?_}}" y="{{_?_}}" nolink="true"></coordinates>'
+Travian.htmlFilters.HHMMSS = "{{_?_|HHMMSS}}"
+Travian.htmlFilters.HHMM = "{{_?_|HHMM}}"
+Travian.htmlFilters.month = '{{_?_|date:"MMMM"}}'
+Travian.htmlFilters.year = '{{_?_|date:"yyyy"}}'
+Travian.htmlFilters.fromNow = '<span i18ndt="{{_?_}}" relative="from"></span>'
+Travian.htmlFilters.truncate = '<span class="truncated">{{_?_}}</span>'
+Travian.htmlFilters.percent = "{{_?_| bidiNumber:'percent':false:false}}"
+Travian.htmlFilters.signedPercent = "{{_?_| bidiNumber:'percent':true:false}}"
+Travian.htmlFilters.signed = "{{_?_| bidiNumber:'':true:false}}"
+Travian.htmlFilters.ratio = '<span class="values" ng-bind-html="0 | bidiRatio:_?_:_?_"></span>'
+Travian.htmlFilters.ratioStyled = '<span class="values" ng-bind-html="0 | bidiRatio:_?_:_?_:true"></span>'
+Travian.htmlFilters.translate = '<translate options="{{::_?_}}">?</translate>'
+Travian.htmlFilters["short"] = "{{::_?_|shortBigNumber:_?_}}"
+Travian.datetimeFormats = {0:{fullDate:"EEEE, d. MMMM y", longDate:"d. MMMM y", medium:"dd.MM.yyyy HH:mm:ss", mediumDate:"dd.MM.yyyy", mediumTime:"HH:mm:ss", "short":"dd.MM.yy HH:mm", shortDate:"dd.MM.yy", shortTime:"HH:mm", veryShort:"dd.MM. | HH:mm"}, 1:{fullDate:"EEEE, MMMM d, y", longDate:"MMMM d, y", medium:"MM/dd/yyyy h:mm:ss a", mediumDate:"MM/dd/yyyy", mediumTime:"h:mm:ss a", "short":"M/d/yy h:mm a", shortDate:"M/d/yy", shortTime:"h:mm a", veryShort:"MM/dd | HH:mm"}, 2:{fullDate:"EEEE, d MMMM y",
+longDate:"d MMMM y", medium:"dd/MM/yyyy h:mm:ss a", mediumDate:"dd/MM/yyyy", mediumTime:"h:mm:ss a", "short":"dd/MM/yy h:mm a", shortDate:"dd/MM/yy", shortTime:"h:mm a", veryShort:"dd/MM | h:mm a"}, 3:{fullDate:"EEEE, y MMMM dd", longDate:"y MMMM d", medium:"yyyy/MM/dd HH:mm:ss", mediumDate:"yyyy/MM/dd", mediumTime:"HH:mm:ss", "short":"yyyy/MM/dd HH:mm", shortDate:"yyyy/MM/dd", shortTime:"HH:mm", veryShort:"MM/dd | HH:mm"}}
+
+Society.CONDITION_WHITE_SEND_RESOURCES = 1
+Society.CONDITION_WHITE_LOST_UNITS = 2
+Society.CONDITION_WHITE_PROVIDED_UNITS = 3
+Society.CONDITION_BLACK_STOLE_RESOURCES = 4
+Society.CONDITION_BLACK_DEFEAT_UNITS = 5
+Society.CONDITION_BLACK_STOLE_TREASURE = 6
+Society.Cc = 1
+Society.Dc = 2
+Society.Pd = 3
+Society.Qd = 4
+
+Achievement.TYPE_WON_A_GAMEWORLD      = 62
+Achievement.TYPE_FINISHED_A_GAMEWORLD = 63
+
+Auction.STATUS_RUNNING = 1
+Auction.STATUS_FINISHED = 2
+Auction.STATUS_CANCELED = 3
+
+Building.EXPANSION_SLOTS = {
+	'25': 2,
+	'26': 3
+}
+
+Building.RESIDENCE_EXPANSION_UNLOCKS = {
+	'0': 10,
+	'1': 20
+}
+
+Building.PALACE_EXPANSION_UNLOCKS = {
+	'0': 10,
+	'1': 15,
+	'2': 20
+}
+
+Building.EXPANSION_SLOT_UNLOCKS = {
+	'25': Building.RESIDENCE_EXPANSION_UNLOCKS,
+	'26': Building.PALACE_EXPANSION_UNLOCKS
+}
+
+Building.TYPE = {
+	WOOD: 1,
+	CLAY: 2,
+	IRON: 3,
+	CROP: 4,
+	SAWMILL: 5,
+	CLAY_BAKERY: 6,
+	IRON_FOUNDRY: 7,
+	MILL: 8,
+	BAKERY: 9,
+	WAREHOUSE: 10,
+	GRANARY: 11,
+	BLACKSMITH: 13,
+	TOURNAMENT_SQUARE: 14,
+	MAIN_BUILDING: 15,
+	RALLY_POINT: 16,
+	MARKET: 17,
+	EMBASSY: 18,
+	BARRACKS: 19,
+	STABLE: 20,
+	WORKSHOP: 21,
+	ACADEMY: 22,
+	CRANNY: 23,
+	TOWN_HALL: 24,
+	RESIDENCE: 25,
+	PALACE: 26,
+	TREASURY: 27,
+	TRADE_OFFICE: 28,
+	GREAT_BARRACKS: 29,
+	GREAT_STABLE: 30,
+	# roman wall
+	CITY_WALL: 31,
+	# natar wall
+	NATAR_CITY_WALL: 43,
+	# teuton wall
+	EARTH_WALL: 32,
+	# gaul wall
+	PALLISADE: 33,
+	STONEMASON: 34,
+	BREWERY: 35,
+	TRAPPER: 36,
+	GREAT_WAREHOUSE: 38,
+	GREAT_GRANARY: 39,
+	WONDER_OF_WORLD: 40,
+	HORSE_DRINKING_TROUGH: 41,
+	MOAT: 42,
+	TEAHOUSE: 44,
+	HIDDEN_TREASURY: 45
+}
+
+Building.WALL_TYPES = {
+	1: Building.TYPE['CITY_WALL'],
+	2: Building.TYPE['EARTH_WALL'],
+	3: Building.TYPE['PALLISADE'],
+	5: Building.TYPE['NATAR_CITY_WALL']
+}
+
+Building.CATEGORY = {
+	INFRASTRUCTURE: 1,
+	MILITARY: 2,
+	RESOURCES: 3
+}
+
+Building.UPGRADE = {
+	# free slot in buildingqueue and enough resources
+	POSSIBLE: 'possible',
+	# buildingqueue full or not enough resources
+	NOT_NOW: 'notNow',
+	# fully upgraded
+	MAX_LEVEL: 'maxLevel',
+	# not enough free supply
+	NOT_AT_ALL: 'notAtAll',
+	# currently demolished
+	DEMOLISH: 'demolish'
+}
+
+Building.MAX_LEVEL = 20
+Building.WW_MAX_LEVEL = 100
+
+Building.MIN_FREE_CROP_AVAILABLE = 2
+
+Building.PREMIUM_LOCATIONS = [42, 43]
+
+Building.RALLY_POINT_LOCATION = 32
+
+BuildingQueue.TYPE_VILLAGE = 1
+BuildingQueue.TYPE_RESOURCES = 2
+BuildingQueue.TYPE_MASTER_BUILDER = 4
+BuildingQueue.TYPE_DESTRUCTION = 5
+
+BuildingQueue.MASTER_BUILDER_SLOTS = 4
+BuildingQueue.FREE_MASTER_BUILDER_SLOTS = 1
+
+ExchangeOffice.TYPE_SILVER = 'silver'
+ExchangeOffice.TYPE_GOLD = 'gold'
+
+FarmListEntry.preventUpdateWithoutFirstFill = true
+
+FarmListEntry.ACTION = {
+	ADD: 1,
+	COPY: 2,
+	TOGGLE: 3
+}
+
+FieldMarkerGlobal.TYPE_GOVERNOR_RELOCATE = 'FieldMarker.GovernorRelocate'
+
+FieldMarkerPersonal.KINGDOM = 2
+FieldMarkerPersonal.SOCIETY = 4
+FieldMarkerPersonal.PLAYER = 5
+
+FieldMarkerPersonal.MINIMIZED_DEFAULT = 0
+FieldMarkerPersonal.MINIMIZED_MINIMIZED = 1
+FieldMarkerPersonal.MINIMIZED_MAXIMIZED = 2
+
+Gameworld.STATUS_OPEN = 0
+Gameworld.STATUS_CLOSED = 1
+Gameworld.STATUS_ENDED = 2
+Gameworld.STATUS_SETUP = 3
+
+GroupInvitation.TYPE_SECRET_SOCIETY = 2
+GroupInvitation.TYPE_KINGDOM = 3
+
+GroupInvitation.COLLECTION_FOR_GROUP = 'group'
+
+Hero.STATUS_IDLE = 0
+Hero.STATUS_RETURNING = 1
+Hero.STATUS_TO_VILLAGE = 2
+Hero.STATUS_TO_OASIS = 3
+Hero.STATUS_TO_ADVENTURE = 4
+Hero.STATUS_SUPPORTING = 5
+Hero.STATUS_TRAPPED = 6
+Hero.STATUS_DEAD = 7
+Hero.STATUS_REVIVING = 8
+
+HeroItem.SLOT_INSTANT_USE = -1
+HeroItem.SLOT_INVENTORY = 0
+HeroItem.SLOT_HELMET = 1
+HeroItem.SLOT_RIGHT_HAND = 2
+HeroItem.SLOT_LEFT_HAND = 3
+HeroItem.SLOT_BODY = 4
+HeroItem.SLOT_SHOES = 5
+HeroItem.SLOT_HORSE = 6
+HeroItem.SLOT_BAG = 7
+
+HeroItem.BONUS_XP = 1
+HeroItem.BONUS_BARRACKS = 2
+HeroItem.BONUS_STABLE = 3
+HeroItem.BONUS_WORKSHOP = 4
+HeroItem.BONUS_SPEED_RETURN = 5
+HeroItem.BONUS_SPEED_OWN_VILLAGES = 6
+HeroItem.BONUS_SPEED_KINGDOM_VILLAGES = 7
+HeroItem.BONUS_SPEED_STAMINA = 8
+HeroItem.BONUS_RAID = 9
+HeroItem.BONUS_NATARS = 10
+HeroItem.BONUS_UNIT_ID = 11
+HeroItem.BONUS_UNIT_STRENGTH = 12
+HeroItem.BONUS_FIGHT_STRENGTH = 13
+HeroItem.BONUS_HEALTH_REGEN = 14
+HeroItem.BONUS_CULTURE_POINTS = 15
+HeroItem.BONUS_ARMOR = 16
+HeroItem.BONUS_SPEED_HERO = 17
+HeroItem.BONUS_SPEED_HORSE = 18
+HeroItem.BONUS_RESKILL = 20
+HeroItem.BONUS_TROOP_HEALING = 21
+HeroItem.BONUS_EYESIGHT = 22
+HeroItem.BONUS_CHICKEN = 23
+HeroItem.BONUS_RESOURCES = 24
+HeroItem.BONUS_CROP = 25
+HeroItem.BONUS_POTION = 26
+
+
+HeroItem.TYPE_OINTMENT = 112
+HeroItem.TYPE_SCROLLS = 113
+HeroItem.TYPE_WATERBUCKET = 114
+HeroItem.TYPE_BOOK = 115
+HeroItem.TYPE_ARTWORK = 116
+HeroItem.TYPE_BANDAGE_25 = 117
+HeroItem.TYPE_BANDAGE_33 = 118
+HeroItem.TYPE_CAGES = 119
+HeroItem.TYPE_TREASURES = 120
+HeroItem.TYPE_HEALING_POTION = 124
+HeroItem.TYPE_ARMOR_UPGRADE = 125
+HeroItem.TYPE_WEAPON_UPGRADE = 126
+HeroItem.TYPE_LEFT_HAND_UPGRADE = 127
+HeroItem.TYPE_HELMET_UPGRADE = 128
+HeroItem.TYPE_SHOE_UPGRADE = 129
+HeroItem.TYPE_RESOURCE_BONUS_3 = 130
+HeroItem.TYPE_RESOURCE_BONUS_4 = 131
+HeroItem.TYPE_RESOURCE_BONUS_5 = 132
+HeroItem.TYPE_CROP_BONUS_3 = 133
+HeroItem.TYPE_CROP_BONUS_4 = 134
+HeroItem.TYPE_CROP_BONUS_5 = 135
+HeroItem.TYPE_ADVENTURE_POINT = 136
+HeroItem.TYPE_BUILDING_GROUND = 137
+HeroItem.TYPE_FINISH_IMMEDIATELY = 138
+HeroItem.TYPE_NPC_TRADER = 139
+HeroItem.TYPE_INSTANT_TRADE_DELIVERY = 140
+HeroItem.TYPE_BANDAGE_25_UPGRADED = 141
+HeroItem.TYPE_BANDAGE_33_UPGRADED = 142
+HeroItem.TYPE_PILE_WOOD_SMALL = 143
+HeroItem.TYPE_PILE_WOOD_MEDIUM = 144
+HeroItem.TYPE_PILE_WOOD_LARGE = 145
+HeroItem.TYPE_PILE_CLAY_SMALL = 146
+HeroItem.TYPE_PILE_CLAY_MEDIUM = 147
+HeroItem.TYPE_PILE_CLAY_LARGE = 148
+HeroItem.TYPE_PILE_IRON_SMALL = 149
+HeroItem.TYPE_PILE_IRON_MEDIUM = 150
+HeroItem.TYPE_PILE_IRON_LARGE = 151
+HeroItem.TYPE_PILE_CROP_SMALL = 152
+HeroItem.TYPE_PILE_CROP_MEDIUM = 153
+HeroItem.TYPE_PILE_CROP_LARGE = 154
+
+HeroItem.IconName = {}
+HeroItem.IconName['Slot1'] = 'helmet'
+HeroItem.IconName['Slot4'] = 'body'
+HeroItem.IconName['Slot3'] = 'leftHand'
+HeroItem.IconName['Slot2'] = 'rightHand'
+HeroItem.IconName['Slot5'] = 'shoes'
+HeroItem.IconName['Slot6'] = 'horse'
+HeroItem.IconName['cardGame'] = 'cardGame'
+HeroItem.IconName[HeroItem.TYPE_OINTMENT] = 'ointment'
+HeroItem.IconName[HeroItem.TYPE_SCROLLS] = 'scroll'
+HeroItem.IconName[HeroItem.TYPE_WATERBUCKET] = 'bucket'
+HeroItem.IconName[HeroItem.TYPE_BOOK] = 'bookOfWisdom'
+HeroItem.IconName[HeroItem.TYPE_ARTWORK] = 'artwork'
+HeroItem.IconName[HeroItem.TYPE_BANDAGE_25] = 'smallBandage'
+HeroItem.IconName[HeroItem.TYPE_BANDAGE_25_UPGRADED] = 'smallBandage'
+HeroItem.IconName[HeroItem.TYPE_BANDAGE_33] = 'bandage'
+HeroItem.IconName[HeroItem.TYPE_BANDAGE_33_UPGRADED] = 'bandage'
+HeroItem.IconName[HeroItem.TYPE_CAGES] = 'cage'
+
+HeroItem.UPGRADE_ITEMS = [
+	HeroItem.TYPE_ARMOR_UPGRADE,
+	HeroItem.TYPE_WEAPON_UPGRADE,
+	HeroItem.TYPE_LEFT_HAND_UPGRADE,
+	HeroItem.TYPE_HELMET_UPGRADE,
+	HeroItem.TYPE_SHOE_UPGRADE
+]
+
+HeroItem.ITEM_IMPROVEMENTS = {}
+HeroItem.ITEM_IMPROVEMENTS[HeroItem.TYPE_BANDAGE_25] = {'id' : HeroItem.TYPE_BANDAGE_25_UPGRADED, 'bonus': 5}
+HeroItem.ITEM_IMPROVEMENTS[HeroItem.TYPE_BANDAGE_33] = {'id' : HeroItem.TYPE_BANDAGE_33_UPGRADED, 'bonus': 5}
+HeroItem.ITEM_IMPROVEMENTS[HeroItem.TYPE_RESOURCE_BONUS_3] = {'id' : HeroItem.TYPE_RESOURCE_BONUS_4, 'bonus': 1}
+HeroItem.ITEM_IMPROVEMENTS[HeroItem.TYPE_RESOURCE_BONUS_4] = {'id' : HeroItem.TYPE_RESOURCE_BONUS_5, 'bonus': 1}
+HeroItem.ITEM_IMPROVEMENTS[HeroItem.TYPE_CROP_BONUS_3] = {'id' : HeroItem.TYPE_CROP_BONUS_4, 'bonus': 1}
+HeroItem.ITEM_IMPROVEMENTS[HeroItem.TYPE_CROP_BONUS_4] = {'id' : HeroItem.TYPE_CROP_BONUS_5, 'bonus': 1}
+
+HeroItem.preventUpdateWithoutFirstFill = true
+
+
+Kingdom.TYPE_NORMAL = 0
+Kingdom.TYPE_UNITED = 1
+
+Kingdom.RIGHT_GOVERNOR = 0
+Kingdom.RIGHT_KING = 1
+Kingdom.RIGHT_DUKE = 2
+Kingdom.RIGHT_VICEKING = 3
+
+Kingdom.NAP = 0
+Kingdom.BND = 1
+Kingdom.WAR = 2
+
+Kingdom.ROLE_STRING = {
+	0: 'governor',
+	1: 'king',
+	2: 'duke',
+	3: 'viceking'
+}
+
+KingdomFightvalues.TYPE_OFF_STRENGTH = 1
+KingdomFightvalues.TYPE_DEF_STRENGTH = 2
+KingdomFightvalues.TYPE_OFF_POINTS = 3
+KingdomFightvalues.TYPE_DEF_POINTS = 4
+
+Marker.OWNER_PLAYER = 1
+Marker.OWNER_KINGDOM = 2
+
+Marker.TYPE_PLAYER = 1
+Marker.TYPE_KINGDOM = 2
+Marker.TYPE_COORDINATES = 3
+Marker.TYPE_TROOP_MOVEMENT = 4
+Marker.TYPE_KING_VILLAGE = 5
+
+Marker.editTypes = {
+	TYPE_EDIT: 1,
+	TYPE_DELETE: 2,
+	TYPE_CREATE: 3
+}
+
+Marker.COLOR_BLUE = {
+	index: 1,
+	name: '01',
+	cssStyle: {'background-color': '#3399ff'},
+	colorRGBValues: '51, 153, 255'
+}
+Marker.COLOR_YELLOW = {
+	index: 2,
+	name: '02',
+	cssStyle: {'background-color': '#ff9900'},
+	colorRGBValues: '255, 153, 0'
+}
+Marker.COLOR_BROWN = {
+	index: 3,
+	name: '03',
+	cssStyle: {'background-color': '#996633'},
+	colorRGBValues: '153, 102, 51'
+}
+Marker.COLOR_OWN = {
+	index: 4,
+	name: '04',
+	cssStyle: {'background-color': '#ffe500'},
+	colorRGBValues: '255, 229, 0'
+}
+Marker.COLOR_TEAL = {
+	index: 5,
+	name: '05',
+	cssStyle: {'background-color': '#66ffff'},
+	colorRGBValues: '102, 255, 255'
+}
+Marker.COLOR_DARK_GREEN = {
+	index: 6,
+	name: '06',
+	cssStyle: {'background-color': '#006633'},
+	colorRGBValues: '0, 102, 51'
+}
+Marker.COLOR_LIGHT_GREEN = {
+	index: 7,
+	name: '07',
+	cssStyle: {'background-color': '#66ff66'},
+	colorRGBValues: '102, 255, 102'
+}
+Marker.COLOR_DARK_BLUE = {
+	index: 8,
+	name: '08',
+	cssStyle: {'background-color': '#3366cc'},
+	colorRGBValues: '51, 102, 204'
+}
+Marker.COLOR_ALLIANCE = {
+	index: 9,
+	name: '09',
+	cssStyle: {'background-color': '#3333cc'},
+	colorRGBValues: '51, 51, 204'
+}
+Marker.COLOR_PURPLE = {
+	index: 10,
+	name: '10',
+	cssStyle: {'background-color': '#993399'},
+	colorRGBValues: '153, 51, 153'
+}
+Marker.COLOR_PINK = {
+	index: 11,
+	name: '11',
+	cssStyle: {'background-color': '#ff66ff'},
+	colorRGBValues: '255, 102, 255'
+}
+Marker.COLOR_RED = {
+	index: 12,
+	name: '12',
+	cssStyle: {'background-color': '#cc3333'},
+	colorRGBValues: '204, 41, 41'
+}
+Marker.COLOR_ENEMY = {
+	index: 13,
+	name: '13',
+	cssStyle: {'background-color': '#cc3333'},
+	colorRGBValues: '204, 41, 41'
+}
+Marker.COLOR_NEUTRAL = {
+	index: 15,
+	name: '15',
+	cssStyle: {'background-color': '#daeacd'},
+	colorRGBValues: '218, 234, 205'
+}
+Marker.TREATY_COLOR_NAP = {
+	index: 16,
+	name: '16',
+	cssStyle: {'background-color': '#00ffff'},
+	colorRGBValues: '0, 255, 255'
+}
+Marker.TREATY_COLOR_BND = {
+	index: 17,
+	name: '17',
+	cssStyle: {'background-color': '#00ff00'},
+	colorRGBValues: '0, 255, 0'
+}
+
+Marker.COLORS = {
+	1: Marker.COLOR_BLUE,
+	2: Marker.COLOR_YELLOW,
+	3: Marker.COLOR_BROWN,
+	4: Marker.COLOR_OWN,
+	5: Marker.COLOR_TEAL,
+	6: Marker.COLOR_DARK_GREEN,
+	7: Marker.COLOR_LIGHT_GREEN,
+	8: Marker.COLOR_DARK_BLUE,
+	9: Marker.COLOR_ALLIANCE,
+	10: Marker.COLOR_PURPLE,
+	11: Marker.COLOR_PINK,
+	12: Marker.COLOR_RED,
+	13: Marker.COLOR_ENEMY,
+	15: Marker.COLOR_NEUTRAL,
+	16: Marker.TREATY_COLOR_NAP,
+	17: Marker.TREATY_COLOR_BND
+}
+
+Marker.VILLAGE_OWN = 'playerMarker/playerMarker_04'
+Marker.VILLAGE_ALLIANCE = 'allianceMarker/allianceMarker_09'
+Marker.VILLAGE_GOVERNOR = 'allianceMarker/allianceMarker_14'
+
+Medal.TYPE_CLIMBER = 1
+Medal.TYPE_ATTACKER = 2
+Medal.TYPE_DEFENDER = 3
+Medal.TYPE_ROBBER = 4
+Medal.TypeString =  {
+	1: 'climber',
+	2: 'attacker',
+	3: 'defender',
+	4: 'robber'
+}
+
+Notifications.TYPE_FLASH = 'flashNotification'
+Notifications.TYPE_NORMAL = ''
+Notifications.TYPE_TIMED = 'timed'
+Notifications.TYPE_CHAT = 'chatNotification'
+Notifications.TYPE_IN_GAME_HELP = 'inGameHelp'
+Notifications.REPORT_ATTACKER_WON_WITHOUT_LOSSES = 1
+Notifications.REPORT_ATTACKER_WON_WITH_LOSSES = 2
+Notifications.REPORT_ATTACKER_LOST = 3
+Notifications.REPORT_DEFENDER_WON_WITHOUT_LOSSES = 4
+Notifications.REPORT_DEFENDER_WON_WITH_LOSSES = 5
+Notifications.REPORT_DEFENDER_LOST_WITH_LOSSES = 6
+Notifications.REPORT_DEFENDER_LOST_WITHOUT_LOSSES = 7
+Notifications.REPORT_SUPPORT_ARRIVED = 8
+Notifications.REPORT_TRADE = 10
+Notifications.REPORT_TRADE_WOOD = 11
+Notifications.REPORT_TRADE_CLAY = 12
+Notifications.REPORT_TRADE_IRON = 13
+Notifications.REPORT_TRADE_CROP = 14
+Notifications.REPORT_SPY_SUCCESS_UNDETECTED = 15
+Notifications.REPORT_SPY_SUCCESS_DETECTED = 16
+Notifications.REPORT_SPY_FAILURE = 17
+Notifications.REPORT_SPY_DEFENDED = 18
+Notifications.REPORT_SPY_NOT_DEFENDED = 19
+Notifications.REPORT_CAPTURED_ANIMALS = 20
+Notifications.REPORT_ADVENTURE = 21
+Notifications.REPORT_WORLD_PEACE = 22
+Notifications.REPORT_PRESTIGE = 23
+Notifications.TRIBUTE_COLLECTED = 31
+Notifications.TROOPS_SEND = 32
+Notifications.CONSTRUCTION_STARTED = 33
+Notifications.TRADER_STARTED = 34
+Notifications.TROOPS_RETURNED = 36
+Notifications.TROOPS_RELEASED = 37
+Notifications.TROOPS_DISBANDED = 38
+Notifications.BUILDING_FINISHED = 39
+Notifications.BUILDING_COMPLETELY_DESTROYED = 41
+Notifications.UNIT_RESEARCH_COMPLETED = 42
+Notifications.NEW_VILLAGE_SETTLED = 43
+Notifications.ATTACK_VILLAGE_STARTED = 44
+Notifications.AUCTION_OVERBID = 46
+Notifications.AUCTION_WON = 47
+Notifications.FRIEND_REQUEST_RECEIVED = 48
+Notifications.SOCIETY_INVITATION_RECEIVED = 49
+Notifications.TRADER_SENT = 50
+Notifications.CELEBRATION_STARTED = 51
+Notifications.CELEBRATION_ENDED = 52
+Notifications.TROOPS_RECRUITING_STARTED = 53
+Notifications.UNIT_RESEARCH_STARTED = 54
+Notifications.TROOPS_SUPPORT_SEND_HOME = 55
+Notifications.TROOPS_INCOMING_FOREIGN_SUPPORT = 57
+Notifications.PLAYER_IS_ATTACKED = 58
+Notifications.REPORT_SHARED_OWN = 60
+Notifications.REPORT_SHARED_KINGDOM = 61
+Notifications.REPORT_SHARED_SOCIETIES = 63
+Notifications.REPORT_SHARED = 64 #we may decide in the future to display a single unified icon for all shared reports
+Notifications.KINGDOM_CHANGED = 66
+Notifications.REQUEST_SENT = 67
+Notifications.KING_REQUEST_RECEIVED = 68
+Notifications.TROOPS_RELEASED_OTHER_TROOPS = 69
+Notifications.TIMER_CORONATION = 72
+Notifications.TIMER_NOOB_PROTECTION = 73
+Notifications.TIMER_DELETION = 74
+Notifications.TIMER_STARVATION_DEACTIVATED = 75
+Notifications.TIMER_WORLD_PEACE = 76
+Notifications.TIMER_GOLD_PROMOTION = 78
+Notifications.TIMER_PLUS_RUNS_OUT = 79
+Notifications.TIMER_RES_BONUS_RUNS_OUT = 80
+Notifications.TIMER_CROP_BONUS_RUNS_OUT = 81
+Notifications.SYSTEM_MESSAGE = 82
+Notifications.AUTO_EXTEND_RES_PRODUCTION_BONUS_NOT_ENOUGH_GOLD = 86
+Notifications.AUTO_EXTEND_CROP_PRODUCTION_BONUS_NOT_ENOUGH_GOLD = 87
+Notifications.AUTO_EXTEND_PLUS_NOT_ENOUGH_GOLD = 88
+Notifications.RES_BONUS_ENDS = 89
+Notifications.CROP_BONUS_ENDS = 90
+Notifications.PLUS_BONUS_ENDS = 91
+Notifications.KINGDOM_OASIS_LOST = 92
+Notifications.KINGDOM_OASIS_WON = 93
+Notifications.OASIS_BONUS_CHANGED = 94
+Notifications.TIMER_NATAR_SPIES_ATTACK = 95
+Notifications.HELP_CENTER_MESSAGE_RECEIVED = 97
+Notifications.TIMER_WORLD_PEACE_TO_BE_ACTIVATED = 98
+Notifications.TIMER_WORLD_PEACE_DISABLE_ONLY_STARVATION = 99
+Notifications.ENOUGH_CULTURE_POINTS_FOR_VILLAGE = 100
+Notifications.ENOUGH_CULTURE_POINTS_FOR_VILLAGE_SOON = 101
+Notifications.NEW_ROBBER_CAMPS = 102
+Notifications.GLOBAL_WORLD_ENDED = 104
+Notifications.DUKE_REQUEST_RECEIVED = 105
+Notifications.DUKE_REQUEST_DECLINED = 106
+Notifications.DUKE_REQUEST_ACCEPTED = 107
+Notifications.DUKE_ABDICATED = 108
+Notifications.DUKE_DISMISSED = 109
+Notifications.ACTIVATION_NEEDED = 110 # Pseudo Notification, no event
+Notifications.ADDED_CARDGAME_FREE_ROLL = 111
+Notifications.COOP_PACKAGE_GRANTED = 112
+Notifications.INVITATION_EMAIL_SENT = 113
+Notifications.REFERRAL_REWARD_CAN_COLLECT = 114
+Notifications.REPORT_FARMLIST_RAID = 115
+Notifications.ACHIEVEMENT = 116
+Notifications.REPORT_FARMLIST_COMPLETED_WITHOUT_LOSSES = 118
+Notifications.REPORT_FARMLIST_COMPLETED_WITH_LOSSES = 119
+Notifications.REPORT_FARMLIST_COMPLETED_WITH_FULL_LOSSES = 120
+Notifications.USED_ITEM_ARTWORK = 121
+Notifications.CELEBRATION_STARTED_POINTS_GAINED = 122
+Notifications.CELEBRATION_STARTED_IN_QUEUE = 123
+Notifications.REPORT_FARMLIST_SINGLE_COMPLETED_WITHOUT_LOSSES = 124
+Notifications.REPORT_FARMLIST_SINGLE_COMPLETED_WITH_LOSSES = 125
+Notifications.REPORT_FARMLIST_SINGLE_COMPLETED_WITH_FULL_LOSSES = 126
+Notifications.FARMLIST_ADDED_VILLAGE = 127
+Notifications.FARMLIST_REMOVED_VILLAGE = 128
+Notifications.KINGDOM_CHANGED_KING = 129
+Notifications.CAN_INVITE_NEUTRAL_GOVERNOR = 130
+Notifications.TIMER_VACATION_ACTIVATION = 131
+Notifications.TIMER_VACATION_MODE = 132
+Notifications.TIMER_VACATION_BOOST = 133
+Notifications.PEACE_OFFER = 134
+Notifications.UNITED_KINGDOM_VICEKING_RESIGNS = 135
+Notifications.UNITED_KINGDOM_DISSOLVES = 136
+Notifications.UNION_REQUEST_RECEIVED = 137
+Notifications.KINGDOM_UNION_AVAILABLE_SOON = 138
+Notifications.KINGDOM_UNION_AVAILABLE = 139
+Notifications.KINGDOM_UNIFIED = 140
+Notifications.REPORT_RELOCATION = 141
+
+Notifications.FIGHT_AND_SPY_REPORTS = [
+	Notifications.REPORT_ATTACKER_WON_WITHOUT_LOSSES,
+	Notifications.REPORT_ATTACKER_WON_WITH_LOSSES,
+	Notifications.REPORT_ATTACKER_LOST,
+	Notifications.REPORT_DEFENDER_WON_WITHOUT_LOSSES,
+	Notifications.REPORT_DEFENDER_WON_WITH_LOSSES,
+	Notifications.REPORT_DEFENDER_LOST_WITH_LOSSES,
+	Notifications.REPORT_DEFENDER_LOST_WITHOUT_LOSSES,
+	Notifications.REPORT_SPY_SUCCESS_UNDETECTED,
+	Notifications.REPORT_SPY_SUCCESS_DETECTED,
+	Notifications.REPORT_SPY_FAILURE,
+	Notifications.REPORT_SPY_DEFENDED,
+	Notifications.REPORT_SPY_NOT_DEFENDED
+]
+
+Notifications.TYPE_STRINGS = {}
+Notifications.TYPE_STRINGS[Notifications.REPORT_ATTACKER_WON_WITHOUT_LOSSES] = 'attackerWonWithoutLosses'
+Notifications.TYPE_STRINGS[Notifications.REPORT_ATTACKER_WON_WITH_LOSSES] = 'attackerWonWithLosses'
+Notifications.TYPE_STRINGS[Notifications.REPORT_ATTACKER_LOST] = 'attackerLost'
+Notifications.TYPE_STRINGS[Notifications.REPORT_DEFENDER_WON_WITHOUT_LOSSES] = 'defenderWonWithoutLosses'
+Notifications.TYPE_STRINGS[Notifications.REPORT_DEFENDER_WON_WITH_LOSSES] = 'defenderWonWithLosses'
+Notifications.TYPE_STRINGS[Notifications.REPORT_DEFENDER_LOST_WITH_LOSSES] = 'defenderLostWithLosses'
+Notifications.TYPE_STRINGS[Notifications.REPORT_DEFENDER_LOST_WITHOUT_LOSSES] = 'defenderLostWithoutLosses'
+Notifications.TYPE_STRINGS[Notifications.REPORT_SPY_SUCCESS_UNDETECTED] = 'spyAttackerWonWithoutLosses'
+Notifications.TYPE_STRINGS[Notifications.REPORT_SPY_SUCCESS_DETECTED] = 'spyAttackerWonWithLosses'
+Notifications.TYPE_STRINGS[Notifications.REPORT_SPY_FAILURE] = 'spyAttackerLost'
+Notifications.TYPE_STRINGS[Notifications.REPORT_SPY_DEFENDED] = 'spyDefenderWon'
+Notifications.TYPE_STRINGS[Notifications.REPORT_SPY_NOT_DEFENDED] = 'spyDefenderLost'
+Notifications.TYPE_STRINGS[Notifications.REPORT_ADVENTURE + '_won'] = 'adventureWon'
+Notifications.TYPE_STRINGS[Notifications.REPORT_ADVENTURE + '_lost'] = 'adventureLost'
+Notifications.TYPE_STRINGS[Notifications.REPORT_CAPTURED_ANIMALS] = 'capturedAnimals'
+Notifications.TYPE_STRINGS[Notifications.REPORT_SUPPORT_ARRIVED] = 'support'
+Notifications.TYPE_STRINGS[Notifications.REPORT_TRADE] = 'trade'
+Notifications.TYPE_STRINGS[Notifications.REPORT_TRADE_WOOD] = 'trade'
+Notifications.TYPE_STRINGS[Notifications.REPORT_TRADE_CLAY] = 'trade'
+Notifications.TYPE_STRINGS[Notifications.REPORT_TRADE_IRON] = 'trade'
+Notifications.TYPE_STRINGS[Notifications.REPORT_TRADE_CROP] = 'trade'
+
+Player.ID = {
+	NATAR: 1,
+	NATURE: 0,
+	ROBBER: -1,
+	GOVERNOR_NPC: -2
+}
+
+Player.TRIBE = {
+	NONE: 0,
+	ROMAN: 1,
+	TEUTON: 2,
+	GAUL: 3,
+	NATURE: 4,
+	NATAR: 5
+}
+
+Player.TRIBE_NAME = {
+	1: 'roman',
+	2: 'teuton',
+	3: 'gaul',
+	4: 'nature',
+	5: 'natar'
+}
+
+Player.ACTION_DELETE_ACCOUNT = 1
+
+Player.CORONATION_STATUS = {
+	CROWNED: 1,
+	IN_CEREMONY: 2,
+	NONE: 3
+}
+
+Player.KINGDOM_ROLE_GOVERNOR = 0
+Player.KINGDOM_ROLE_KING = 1
+Player.KINGDOM_ROLE_DUKE = 2
+Player.KINGDOM_ROLE_VICEKING = 3
+
+Player.KINGDOM_ROLE_NAME = {}
+Player.KINGDOM_ROLE_NAME[Player.KINGDOM_ROLE_GOVERNOR] = 'governor'
+Player.KINGDOM_ROLE_NAME[Player.KINGDOM_ROLE_KING] = 'king'
+Player.KINGDOM_ROLE_NAME[Player.KINGDOM_ROLE_DUKE] = 'duke'
+Player.KINGDOM_ROLE_NAME[Player.KINGDOM_ROLE_VICEKING] = 'viceking'
+
+Player.COLLECTION_KINGDOM = 'kingdom'
+
+Player.UI_LIMITATIONS = {}
+Player.UI_LIMITATIONS.SHOW_OASIS = 0
+Player.UI_LIMITATIONS.ALWAYS_SHOW_TRADE_ROUTES = 1
+
+Player.VACATION_STATE_INACTIVE = 0
+Player.VACATION_STATE_ACTIVATING = 1
+Player.VACATION_STATE_ACTIVE = 2
+Player.VACATION_STATE_BOOST = 3
+
+PlayerProgressTrigger.TYPE_OPEN_PREMIUM_MENU = 1
+PlayerProgressTrigger.TYPE_ROBBER_GOODS = 2
+PlayerProgressTrigger.TYPE_ADVENTURE = 3
+PlayerProgressTrigger.TYPE_ANNEX_OASIS = 4
+PlayerProgressTrigger.TYPE_INVITE_A_FRIEND = 5
+PlayerProgressTrigger.TYPE_IN_GAME_HELP = 6
+
+PlayerProgressTrigger.TOPIC_VILLAGE = 'Village'
+PlayerProgressTrigger.TOPIC_ROBBERS = 'Robbers'
+PlayerProgressTrigger.TOPIC_KINGDOM = 'Kingdom'
+PlayerProgressTrigger.TOPIC_HERO = 'Hero'
+PlayerProgressTrigger.TOPIC_ITEMS = 'Items'
+PlayerProgressTrigger.TOPIC_OASES = 'Oases'
+PlayerProgressTrigger.TOPIC_TRADING = 'Trading'
+PlayerProgressTrigger.TOPIC_MILITARY_DIPLOMACY = 'MilitaryAndDiplomacy'
+PlayerProgressTrigger.TOPIC_PREMIUM = 'Premium'
+
+PlayerProgressTrigger.HELP_PAGE_ROBBER_HIDEOUTS = 'RobberHideouts' # Tutorial done & detail view or "send troops" view for a Robber Hideout is opened
+PlayerProgressTrigger.HELP_PAGE_DUKES = 'Dukes' # "Kingdom" tab of "Societies" window is opened
+PlayerProgressTrigger.HELP_PAGE_MAP_DETAIL_VIEW = 'MapAndDetailView' #Tutorial done & map view opened
+PlayerProgressTrigger.HELP_PAGE_ADVENTURES = 'Adventures' # Adventure menu opened
+PlayerProgressTrigger.HELP_PAGE_HERO_PRODUCTION = 'HeroProduction' # Hero attribute menu opened
+PlayerProgressTrigger.HELP_PAGE_AUCTIONS = 'Auctions' # Auction menu visited
+PlayerProgressTrigger.HELP_PAGE_ASSIGN_OASIS = 'AssignOasis' # Embassy built & opened "Oases" tab in Embassy window
+PlayerProgressTrigger.HELP_PAGE_TROOPS_IN_OASIS = 'TroopsInOases' # "Assign Oasis" quest was solved & opened non-wild oasis detail view
+PlayerProgressTrigger.HELP_PAGE_WILD_OASES = 'WildOases' # Detail view of wild Oasis opened
+PlayerProgressTrigger.HELP_PAGE_TRADING_RESOURCES = 'TradingResources' # "Buy" tab of marketplace opened
+PlayerProgressTrigger.HELP_PAGE_OFFERING_RESOURCES = 'OfferingResources' # "Sell" tab of marketplace opened
+PlayerProgressTrigger.HELP_PAGE_CARD_GAME = 'CardGame' # Card game screen opened
+PlayerProgressTrigger.HELP_PAGE_RUNTIME_FEATURES = 'RuntimeFeatures' # Premium menu opened
+PlayerProgressTrigger.HELP_PAGE_MASTER_BUILDER = 'MasterBuilder' # Building queue full
+PlayerProgressTrigger.HELP_PAGE_TRADE_ROUTES = 'TradeRoutes' # 3 or more villages owned & marketplace opened & Plus Account active
+PlayerProgressTrigger.HELP_PAGE_ATTACK_TYPES = 'AttackTypes' # Beginner protection ended & "Send troops" screen opened
+PlayerProgressTrigger.HELP_PAGE_STRATEGIC_MAP = 'StrategicMap' # Entered strategic (maximally zoomed out) map view
+PlayerProgressTrigger.HELP_PAGE_FARM_LISTS = 'FarmLists' # Sum of outgoing attacks and raids is at least 3 at the same time OR opened farm list tab
+PlayerProgressTrigger.HELP_PAGE_VICTORY_POINTS = 'VictoryPoints' # Second duke slot was unlocked in the kingdom
+PlayerProgressTrigger.HELP_PAGE_INVITE_FRIEND = 'InviteAFriend' # "Invite a Friend" tab opened
+PlayerProgressTrigger.HELP_PAGE_SUPPORTING = 'SupportOtherPlayers' # Beginner protection ended & player in kingdom is under attack & opened map view
+
+PlayerProgressTrigger.CHECK_ASSIGN_OASIS_QUEST_SOLVED = 1
+PlayerProgressTrigger.CHECK_THREE_VILLAGES_OWNED = 2
+
+PlayerPunishment.TYPE_AUTO_BAN = 'playerBanned'
+PlayerPunishment.TYPE_SUSPENDED = 'playerSuspended'
+PlayerPunishment.TYPE_LOCKED = 'playerLocked'
+PlayerPunishment.TYPE_ISOLATED = 'playerIsolated'
+
+PlayerPunishment.STRIKE_REASON_GENERAL = 1
+PlayerPunishment.STRIKE_REASON_MULTI_ACCOUNT = 2
+PlayerPunishment.STRIKE_REASON_PASSWORD_SHARING = 3
+PlayerPunishment.STRIKE_REASON_BUG_ABUSE = 4
+PlayerPunishment.STRIKE_REASON_BOT_OR_SCRIPT_USING = 5
+PlayerPunishment.STRIKE_REASON_SILVER_FRAUD = 6
+PlayerPunishment.STRIKE_REASON_PAYMENT = 7
+PlayerPunishment.STRIKE_REASON_HARASSMENT_INSULT = 8
+PlayerPunishment.STRIKE_REASON_ACP_DELETION = 9
+PlayerPunishment.STRIKE_REASON_ACP_PAYMENT = 10
+PlayerPunishment.STRIKE_REASON_SPAM = 11
+PlayerPunishment.STRIKE_REASON_ADVERTISING = 12
+
+PlayerPunishment.ACTION_ISOLATED = 1
+PlayerPunishment.ACTION_LOCK = 2
+
+PremiumFeature.FEATURE_NAME_FINISH_NOW = 'finishNow'
+PremiumFeature.FEATURE_NAME_EXCHANGE_OFFICE = 'exchangeOffice'
+PremiumFeature.FEATURE_NAME_PRODUCTION_BONUS = 'productionBonus'
+PremiumFeature.FEATURE_NAME_CROP_PRODUCTION_BONUS = 'cropProductionBonus'
+PremiumFeature.FEATURE_NAME_PLUS_ACCOUNT = 'plusAccount'
+PremiumFeature.FEATURE_NAME_NPC_TRADER = 'NPCTrader'
+PremiumFeature.FEATURE_NAME_FETCH_TRIBUTE_INSTANTLY = 'tributeFetchInstantly'
+PremiumFeature.FEATURE_NAME_FETCH_ALL_TRIBUTE_INSTANTLY = 'tributeFetchAllInstantly'
+PremiumFeature.FEATURE_NAME_TREASURE_RESOURCES_INSTANT = 'treasureResourcesInstant'
+PremiumFeature.FEATURE_NAME_STARTER_PACKAGE = 'starterPackage'
+PremiumFeature.FEATURE_NAME_BOOK_BUILD_MASTER_SLOT = 'buildingMasterSlot'
+PremiumFeature.FEATURE_NAME_TRADER_SLOT = 'traderSlot'
+PremiumFeature.FEATURE_NAME_TRADER_ARRIVE_INSTANTLY = 'traderArriveInstantly'
+PremiumFeature.FEATURE_NAME_CARDGAME_SINGLE = 'cardgameSingle'
+PremiumFeature.FEATURE_NAME_CARDGAME_4OF5 = 'cardgame4of5'
+
+PremiumFeature.AUTO_EXTEND_FLAG_RES_BONUS = 0
+PremiumFeature.AUTO_EXTEND_FLAG_CROP_BONUS = 1
+PremiumFeature.AUTO_EXTEND_FLAG_PLUS_BONUS = 2
+
+# Limited Premium Features
+PremiumFeature.LIMITED_FLAG_STARTER_PACKAGE = 0
+PremiumFeature.LIMITED_FLAG_FIRST_BUILD_MASTER_SLOT = 1
+PremiumFeature.LIMITED_FLAG_SECOND_BUILD_MASTER_SLOT = 2
+PremiumFeature.LIMITED_FLAG_THIRD_BUILD_MASTER_SLOT = 3
+PremiumFeature.LIMITED_FLAG_TRADER_SLOT_FIRST = 4
+PremiumFeature.LIMITED_FLAG_TRADER_SLOT_SECOND = 5
+
+# Starter package versions
+PremiumFeature.STARTER_PACKAGE_VERSION_1 = 1
+PremiumFeature.STARTER_PACKAGE_VERSION_2 = 2
+
+# Limits the use of the npc trader feature by the amount of traded resources
+PremiumFeature.NPC_TRADER_INSIGNIFICANCE_LIMIT = 5
+
+PrestigeCondition.LEVELUP_HERO = 1
+PrestigeCondition.COMPLETE_ADVENTURE = 2
+PrestigeCondition.COMPLETE_DAILY_QUEST = 3
+PrestigeCondition.COMPLETE_RESEARCH = 4
+PrestigeCondition.POPULATION_GROW = 5
+PrestigeCondition.WRITE_MESSAGE = 6
+PrestigeCondition.ACQUIRE_VILLAGE = 7
+PrestigeCondition.TREASURES = 8
+PrestigeCondition.IMPROVE_RANK_POPULATION = 9
+PrestigeCondition.IMPROVE_RANK_ATTACKER = 10
+PrestigeCondition.IMPROVE_RANK_DEFENDER = 11
+PrestigeCondition.IMPROVE_RANK_VILLAGES = 12
+PrestigeCondition.IMPROVE_RANK_HEROES = 13
+PrestigeCondition.HOLD_TOP_RANKING = 14
+PrestigeCondition.ATTACK_DEFEND_PLAYER = 15
+
+Quest.STATUS_INACTIVE = 1
+Quest.STATUS_ACTIVATABLE = 2
+Quest.STATUS_ACTIVE = 3
+Quest.STATUS_DONE = 4
+Quest.STATUS_FINISHED = 5
+
+Quest.DAILY_QUESTS_NUMBER = 3
+
+Quest.DAILY_CONDITIONAL_OPEN_PREMIUM_MENU = 10015
+
+QuestGiver.DAILY = -1
+QuestGiver.MYSELF = 0
+QuestGiver.WREN = 1
+QuestGiver.FARMER = 2
+QuestGiver.SCOUT = 3
+QuestGiver.WOODCUTTER = 4
+QuestGiver.CLAY_MAN = 5
+QuestGiver.MINER = 6
+QuestGiver.TRADER = 7
+QuestGiver.ROBBER = 8
+QuestGiver.CHIEF = 9
+QuestGiver.ENVOY = 10
+QuestGiver.ADVENTURER = 11
+QuestGiver.GENERAL = 12
+
+# Quest givers which stand in the main village
+QuestGiver.VILLAGERS = [
+	QuestGiver.WREN,
+	QuestGiver.SCOUT,
+	QuestGiver.CHIEF,
+	QuestGiver.ENVOY,
+	QuestGiver.ADVENTURER
+]
+
+# The animations will be randomly played, see questGiver directive
+QuestGiver.ANIMATIONS = {}
+#QuestGiver.ANIMATIONS[QuestGiver.WREN] = [17, 50, 36] # Count of frames for each animation
+#QuestGiver.ANIMATIONS[QuestGiver.SCOUT] = [42, 30, 29]
+#QuestGiver.ANIMATIONS[QuestGiver.CHIEF] = [35, 36, 37]
+
+QuestGiver.STRING = {}
+QuestGiver.STRING[QuestGiver.DAILY] = 'daily'
+QuestGiver.STRING[QuestGiver.MYSELF] = 'myself'
+QuestGiver.STRING[QuestGiver.WREN] = 'wren'
+QuestGiver.STRING[QuestGiver.FARMER] = 'farmer'
+QuestGiver.STRING[QuestGiver.SCOUT] = 'scout'
+QuestGiver.STRING[QuestGiver.WOODCUTTER] = 'woodcutter'
+QuestGiver.STRING[QuestGiver.CLAY_MAN] = 'clayMan'
+QuestGiver.STRING[QuestGiver.MINER] = 'miner'
+QuestGiver.STRING[QuestGiver.TRADER] = 'trader'
+QuestGiver.STRING[QuestGiver.ROBBER] = 'robber'
+QuestGiver.STRING[QuestGiver.CHIEF] = 'chief'
+QuestGiver.STRING[QuestGiver.ENVOY] = 'envoy'
+QuestGiver.STRING[QuestGiver.ADVENTURER] = 'adventurer'
+QuestGiver.STRING[QuestGiver.GENERAL] = 'general'
+
+Report.COLLECTION_PERSONAL = 'own'
+Report.COLLECTION_KING = 'king'
+Report.COLLECTION_KING_MINIONS = 'king_minions'
+Report.COLLECTION_SOCIETY = 'society'
+Report.COLLECTION_FAVORITE = 'favorite'
+Report.COLLECTION_SEARCH = 'search'
+Report.COLLECTION_PRESTIGE = 'prestige'
+Report.ALL_COLLECTIONS = [
+	Report.COLLECTION_PERSONAL,
+	Report.COLLECTION_KING,
+	Report.COLLECTION_KING_MINIONS,
+	Report.COLLECTION_SOCIETY,
+	Report.COLLECTION_FAVORITE,
+	Report.COLLECTION_SEARCH,
+	Report.COLLECTION_PRESTIGE
+]
+
+Report.DISPLAY_TYPE_SUPPORT = 1
+Report.DISPLAY_TYPE_TRADE = 2
+Report.DISPLAY_TYPE_ADVENTURE = 3
+Report.DISPLAY_TYPE_FIGHT = 4
+Report.DISPLAY_TYPE_SPY = 5
+Report.DISPLAY_TYPE_VISIT = 6
+Report.DISPLAY_TYPE_SUPPORT_ATTACKED = 7
+Report.DISPLAY_TYPE_TROOP_RELEASE = 8
+Report.DISPLAY_TYPE_ANIMALS_CAPTURE = 9
+Report.DISPLAY_TYPE_PRESTIGE = 10
+Report.DISPLAY_TYPE_FARMLIST_RAID = 11
+Report.DISPLAY_TYPE_FARMLIST_RAID_COMPLETE = 12
+Report.DISPLAY_TYPE_RELOCATION = 13
+
+Report.DISPLAY_TYPES_FIGHT = [
+	Report.DISPLAY_TYPE_FIGHT,
+	Report.DISPLAY_TYPE_SPY,
+	Report.DISPLAY_TYPE_VISIT,
+	Report.DISPLAY_TYPE_SUPPORT_ATTACKED,
+	Report.DISPLAY_TYPE_ANIMALS_CAPTURE
+]
+
+Report.ADVENTURE_LOOT_TYPE_NOTHING = 0
+Report.ADVENTURE_LOOT_TYPE_RESOURCES = 3
+Report.ADVENTURE_LOOT_TYPE_SILVER = 4
+Report.ADVENTURE_LOOT_TYPE_TROOPS = 5
+
+Report.REPORTS_PER_PAGE = 10
+
+Resources.STRING = {
+	0: 'resourcesAll',
+	1: 'wood',
+	2: 'clay',
+	3: 'iron',
+	4: 'crop'
+}
+
+Resources.ID = {
+	'wood': 1,
+	'clay': 2,
+	'iron': 3,
+	'crop': 4
+}
+
+Resources.WOOD = 1
+Resources.CLAY = 2
+Resources.IRON = 3
+Resources.CROP = 4
+
+Session.TYPE_PLAYER  = 0
+Session.TYPE_DUAL = 1
+Session.TYPE_SITTER = 2
+Session.TYPE_ADMIN = 3
+
+Session.RIGHT_SEND_RAIDS = 1
+Session.RIGHT_SEND_SUPPORT = 2
+Session.RIGHT_SEND_MERCHANTS = 3
+Session.RIGHT_SPEND_GOLD = 4
+Session.RIGHT_ACCESS_CHAT = 5
+
+Settings.TIME_FORMATS = {
+	EU: 0,
+	US: 1,
+	UK: 2,
+	ISO: 3
+}
+
+Settings.TIME_TYPES = {
+	UTC: 0,
+	LOCAL: 1,
+	GAMEWORLD: 2
+}
+
+Settings.PREMIUM_CONFIRMATION_FLAGS = {
+	'DISABLE_GOLD_USAGE_CONFIRMATION': 0,
+	'DISABLE_PREMIUM_USAGE_CONFIRMATION': 1
+}
+
+SilverChange.TYPE_EXCHANGE_OFFICE = 1
+SilverChange.TYPE_AUCTION = 2
+SilverChange.TYPE_SELL_TO_INTERMEDIARY = 3
+SilverChange.TYPE_ADVENTURE = 4
+SilverChange.TYPE_COOP_PACKAGE = 5
+SilverChange.TYPE_QUEST = 6
+SilverChange.TYPE_STARTER_PACKAGE = 7
+SilverChange.TYPE_CARD_GAME = 8
+
+Society.ATTITUDE_WHITE = 1
+Society.ATTITUDE_BLACK = 2
+
+Society.TARGET_VILLAGE = 1
+Society.TARGET_PLAYER = 2
+Society.TARGET_KINGDOM = 3
+Society.TARGET_SOCIETY = 5
+
+Society.CONDITION_WHITE_SEND_RESOURCES = 1
+Society.CONDITION_WHITE_LOST_UNITS = 2
+Society.CONDITION_WHITE_PROVIDED_UNITS = 3
+Society.CONDITION_BLACK_STOLE_RESOURCES = 4
+Society.CONDITION_BLACK_DEFEAT_UNITS = 5
+Society.CONDITION_BLACK_STOLE_TREASURE = 6
+
+Society.SHARED_CHAT = 1
+Society.SHARED_REPORTS = 2
+Society.SHARED_NEXT_ATTACKS = 4
+Society.SHARED_VILLAGE_DETAILS = 8
+
+SocietyConditions.TYPE_RESOURCES = 1
+SocietyConditions.TYPE_TROOPS = 2
+SocietyConditions.TYPE_TREASURES = 3
+SocietyConditions.TYPE_TROOPS_DEPLOYED = 4
+
+TradeOffer.COLLECTION_OWN = 'own'
+TradeOffer.COLLECTION_ALL = 'all'
+
+Troops.STATUS_HOME = 'home'
+Troops.STATUS_TRANSIT = 'transit'
+Troops.STATUS_SUPPORT = 'support'
+Troops.STATUS_TRAP = 'trap'
+
+Troops.COLLECTION_STATIONARY = 'stationary'
+Troops.COLLECTION_MOVING = 'moving'
+Troops.COLLECTION_TRAPPED = 'trapped'
+Troops.COLLECTION_ELSEWHERE = 'elsewhere'
+Troops.COLLECTION_ALL = 'all'
+
+Troops.MOVEMENT_TYPE_ATTACK = 3
+Troops.MOVEMENT_TYPE_RAID = 4
+Troops.MOVEMENT_TYPE_SUPPORT = 5
+Troops.MOVEMENT_TYPE_SPY = 6
+Troops.MOVEMENT_TYPE_TRANSPORT = 7
+Troops.MOVEMENT_TYPE_RETURN = 9
+Troops.MOVEMENT_TYPE_SETTLE = 10
+Troops.MOVEMENT_TYPE_TRIBUTE_COLLECT = 12
+Troops.MOVEMENT_TYPE_ADVENTURE = 20
+Troops.MOVEMENT_TYPE_RETURN_ADVENTURE = 27
+Troops.MOVEMENT_TYPE_TRANSPORT_RETURN = 33
+Troops.MOVEMENT_TYPE_REGENERATION = 36
+Troops.MOVEMENT_TYPE_SIEGE = 47
+Troops.MOVEMENT_TYPE_TREASURE_RESOURCES = 50
+
+Troops.TYPE_RAM = 7
+Troops.TYPE_CATAPULT = 8
+Troops.TYPE_LEADER = 9
+Troops.TYPE_SETTLER = 10
+Troops.TYPE_HERO = 11
+
+Troops.TYPE_TRAPS = 79
+
+Troops.SECOND_TARGET_CATAPULTS = 20
+
+Troops.MAX_LEVEL = 20
+
+Troops.MOVEMENT_ICON = {}
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_ATTACK] = 'movement_attack_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_SIEGE] = 'movement_attack_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_RAID] = 'movement_attack_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_SUPPORT] = 'movement_support_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_SPY] = 'movement_spy_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_TRANSPORT] = 'movement_trade_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_RETURN] = 'movement_support_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_SETTLE] = 'movement_settle_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_TRIBUTE_COLLECT] = 'movement_tribute_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_ADVENTURE] = 'movement_adventure_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_RETURN_ADVENTURE] = 'movement_support_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_TRANSPORT_RETURN] = 'movement_trade_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_REGENERATION] = 'movement_heal_small_flat_black'
+Troops.MOVEMENT_ICON[Troops.MOVEMENT_TYPE_TREASURE_RESOURCES] = 'movement_trade_small_flat_black'
+
+TroopsMovementInfo.COLLECTION_ATTACK_VILLAGE = "attackVillage"
+
+Village.TYPE_NORMAL = 0
+Village.TYPE_MAIN = 1
+Village.TYPE_TOWN = 2
+Village.TYPE_MAIN_TOWN = 3
+Village.TYPE_WORLD_WONDER_VILLAGE = 4
+Village.TYPE_ROBBER_VILLAGE = 5
+Village.TYPE_GOVERNOR_NPC_VILLAGE = 6
+Village.TYPE_WORLD_WONDER_TOWN = 7
+Village.TYPE_KINGDOM_ROBBER = 8
+
+Village.TYPE_OASIS = 10
+
+Village.COLLECTION_OWN = 'own'
+Village.COLLECTION_KINGDOM = 'kingdom'
+Village.COLLECTION_NPCS = 'npc'
+Village.COLLECTION_SOCIETY = 'society'
+
+Village.PRODUCTION_TYPE_BUILDING = 1
+Village.PRODUCTION_TYPE_OASIS = 2
+Village.PRODUCTION_TYPE_HERO = 3
+Village.PRODUCTION_TYPE_TREASURES = 5
+Village.PRODUCTION_TYPE_GOLD = 6
+Village.PRODUCTION_TYPE_OASIS_TROOPS = 7
+
+Village.OASIS_STATUS_NO_OASIS = 0
+Village.OASIS_STATUS_OCCUPIED = 1
+Village.OASIS_STATUS_WILD = 3
+
+ChatNotification.PLAYER_JOINED = 1
+ChatNotification.PLAYER_LEFT = 2
+ChatNotification.PLAYER_ONLINE = 3
+ChatNotification.PLAYER_OFFLINE = 4
+
+ChatRoom.TYPE_PRIVATE = 1
+ChatRoom.TYPE_GROUP = 3
+ChatRoom.TYPE_PUBLIC = 4
+ChatRoom.TYPE_KINGDOM = 5
+ChatRoom.TYPE_SECRET_SOCIETY = 7
+
+ChatRoom.GLOBAL = ChatRoom.TYPE_PUBLIC + '.global'
+ChatRoom.BEGINNER = ChatRoom.TYPE_PUBLIC + '.beginner'
+
+ChatRoomUser.STATUS_NOT_AVAILABLE = -1
+ChatRoomUser.STATUS_OFFLINE = 0
+ChatRoomUser.STATUS_ONLINE = 1
+ChatRoomUser.STATUS_AFK = 2
+
+ChatUser.STATUS_NOT_AVAILABLE = -1
+ChatUser.STATUS_OFFLINE = 0
+ChatUser.STATUS_ONLINE = 1
+ChatUser.STATUS_AFK = 2
+
+Friend.STATUS_NOT_AVAILABLE = -1
+Friend.STATUS_OFFLINE = 0
+Friend.STATUS_ONLINE = 1
+Friend.STATUS_AFK = 2
