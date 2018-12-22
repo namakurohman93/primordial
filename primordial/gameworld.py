@@ -42,7 +42,7 @@ class Gameworld():
     def is_authenticated(self):
         """ Checks whether user is authenticated with the gameworld """
 
-        if 'error' in self.payment.getPaymentShopUrl():
+        if 'error' in self.troops.getMarkers():
             return False
         else:
             return True
