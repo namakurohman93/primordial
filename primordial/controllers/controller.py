@@ -21,6 +21,12 @@ class Controller:
     def __dir__(self):
         return [action for action in self.actions.keys()]
 
+    def __getstate__(self):
+        return self.__dict__
+
+    def __setstate__(self, name):
+        self.__dict__.update(name)
+
     def _fabricate_function(self, action_name):
         """
         Fabricates a function so we can call dict elements in self.actions as if they were
