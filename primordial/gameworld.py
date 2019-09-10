@@ -1,43 +1,59 @@
+import re
 import json
 import time
-from urllib import parse
-from .controllers.gameworld import (
-    player, farmList, logger, troops, village, cache, quest, error, auctions, hero, building,
-    trade, ranking, kingdom, map, reports, society, premiumFeature, payment, kingdomTreaty, login
-)
+import urllib.parse
+
+from .url import URL
+from .controllers.gameworld import map
+from .controllers.gameworld import hero
+from .controllers.gameworld import cache
+from .controllers.gameworld import error
+from .controllers.gameworld import login
+from .controllers.gameworld import quest
+from .controllers.gameworld import trade
+from .controllers.gameworld import logger
+from .controllers.gameworld import player
+from .controllers.gameworld import troops
+from .controllers.gameworld import kingdom
+from .controllers.gameworld import payment
+from .controllers.gameworld import ranking
+from .controllers.gameworld import reports
+from .controllers.gameworld import society
+from .controllers.gameworld import village
+from .controllers.gameworld import auctions
+from .controllers.gameworld import building
+from .controllers.gameworld import farmList
+from .controllers.gameworld import kingdomTreaty
+from .controllers.gameworld import premiumFeature
 
 
-class Gameworld():
-    api_root = 'https://%s.kingdoms.com/api/?'
-
-    def __init__(self, client, msid):
+class Gameworld:
+    def __init__(self, client):
         self.client = client
-        self.msid = msid
-        self.session_key = ''
-        self.api_root = ''  # Will vary based on gameworld name
-
+        self.config = dict()
+        self.gameworld_api = f'{URL.GameworldAPI}'
         # Controllers
-        self.player = player.Player(post_handler=self.post)
-        self.farmList = farmList.FarmList(post_handler=self.post)
-        self.logger = logger.Logger(post_handler=self.post)
-        self.troops = troops.Troops(post_handler=self.post)
-        self.village = village.Village(post_handler=self.post)
-        self.cache = cache.Cache(post_handler=self.post)
-        self.quest = quest.Quest(post_handler=self.post)
-        self.error = error.Error(post_handler=self.post)
-        self.auctions = auctions.Auctions(post_handler=self.post)
-        self.hero = hero.Hero(post_handler=self.post)
-        self.building = building.Building(post_handler=self.post)
-        self.trade = trade.Trade(post_handler=self.post)
-        self.ranking = ranking.Ranking(post_handler=self.post)
-        self.kingdom = kingdom.Kingdom(post_handler=self.post)
         self.map = map.Map(post_handler=self.post)
+        self.hero = hero.Hero(post_handler=self.post)
+        self.cache = cache.Cache(post_handler=self.post)
+        self.error = error.Error(post_handler=self.post)
+        self.login = login.Login(post_handler=self.post)
+        self.quest = quest.Quest(post_handler=self.post)
+        self.trade = trade.Trade(post_handler=self.post)
+        self.logger = logger.Logger(post_handler=self.post)
+        self.player = player.Player(post_handler=self.post)
+        self.troops = troops.Troops(post_handler=self.post)
+        self.kingdom = kingdom.Kingdom(post_handler=self.post)
+        self.payment = payment.Payment(post_handler=self.post)
+        self.ranking = ranking.Ranking(post_handler=self.post)
         self.reports = reports.Reports(post_handler=self.post)
         self.society = society.Society(post_handler=self.post)
-        self.premiumFeature = premiumFeature.PremiumFeature(post_handler=self.post)
-        self.payment = payment.Payment(post_handler=self.post)
+        self.village = village.Village(post_handler=self.post)
+        self.auctions = auctions.Auctions(post_handler=self.post)
+        self.building = building.Building(post_handler=self.post)
+        self.farmList = farmList.FarmList(post_handler=self.post)
         self.kingdomTreaty = kingdomTreaty.KingdomTreaty(post_handler=self.post)
-        self.login = login.Login(post_handler=self.post)
+        self.premiumFeature = premiumFeature.PremiumFeature(post_handler=self.post)
 
     def is_authenticated(self):
         """ Checks whether user is authenticated with the gameworld """
@@ -47,38 +63,80 @@ class Gameworld():
         else:
             return True
 
-    def authenticate(self, gameworld_id, gameworld_name):
+    def authenticate(self, gameworld_name, gameworld_id=None, avatar_id=None):
         """ Authenticates with the gameworld """
 
-        mellon_root_url = 'https://mellon-t5.traviangames.com'
+        self.gameworld_api = self.gameworld_api.format(gameworld_name.lower())
 
-        # STEP 1
-        response = self.client.get(
-            f'{mellon_root_url}/game-world/join/gameWorldId/{gameworld_id}?msid={self.msid}&msname=msid')
-        # Fish out 32 char long token
-        token = response.text[response.text.find('token=')+6: response.text.find('token=')+38]
+        if gameworld_id:
+            r = self.client.get(
+                url=URL.MellonURL.join_gameworld.format(gameworld_id),
+                params={'msid': self.msid, 'msname': 'msid'},
+            )
 
-        # STEP 3
-        response = self.client.get(
-            f'https://{gameworld_name.lower()}.kingdoms.com/api/login.php?token={token}&msid={self.msid}&msname=msid')
+        if avatar_id:
+            r = self.client.get(
+                url=URL.MellonURL.join_as_guest.format(avatar_id),
+                params={'msid': self.msid, 'msname': 'msid'},
+            )
 
-        encoded_session_key = self.client.session.cookies.get('t5SessionKey', domain=f'{gameworld_name}.kingdoms.com')
-        decoded_session_key = parse.unquote(encoded_session_key)
-        self.session_key = json.loads(decoded_session_key)['key']
+        token = re.search(r'token=([\w]*)&msid', r.text).group(1)
 
-        self.api_root = Gameworld.api_root % gameworld_name.lower()
+        r = self.client.get(
+            url=URL.GameworldAPI.login.format(gameworld_name.lower()),
+            params={'token': token, 'msid': self.msid, 'msname': 'msid'}
+        )
+        # add travian config
+        self.config.update(
+            json.loads(
+                re.search(
+                    r'Travian.Config = ({\"feature[\s\w\S\W]*);Travian.Config.worldRadius',
+                    r.text,
+                ).group(1)
+            )
+        )
 
     def post(self, controller, action, params={}):
         payload = {
             'action': action,
             'controller': controller,
             'params': params,
-            'session': self.session_key
-            }
+            'session': self.session,
+        }
 
-        # Create non-float timestamp like 154526134228
-        timestamp = int('{:.2f}'.format(time.time()).replace('.', ''))
-        url = f'{self.api_root}c={controller}&a={action}&t{timestamp}'
+        url = '?'.join(
+            [
+                self.gameworld_api,
+                urllib.parse.urlencode({
+                    'controller': controller,
+                    'action': action
+                })
+            ]
+        )
 
-        response = self.client.post(url=url, data=json.dumps(payload))
-        return response.json()
+        t = f'{time.time():.3f}'.replace('.', '')
+
+        return self.client.post(url=url + f'&t{t}', json=payload).json()
+
+    @property
+    def msid(self):
+        return self.client.cookies.get(
+            name='msid',
+            domain='.kingdoms.com',
+        )
+
+    @property
+    def decoded_session(self):
+        encoded_session = self.client.cookies.get(
+            name='t5SessionKey',
+            domain=self.gameworld_api[8:-5],
+        )
+        return json.loads(urllib.parse.unquote(encoded_session))
+
+    @property
+    def player_id(self):
+        return int(self.decoded_session['id'])
+
+    @property
+    def session(self):
+        return self.decoded_session['key']

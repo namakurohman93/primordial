@@ -12,6 +12,7 @@ Travian 5 API Client Framework
 	* [Authenticate](#Authenticate)
 	* [Connect to a gameworld](#Connect-to-a-gameworld)
 	* [Explore](#Explore)
+	* [Customize HttpClient](#Customize-HttpClient)
 * [Controllers](#Controllers)
 	* [Lobby Controllers](#Lobby-Controllers)
 	* [Gameworld Controllers](#Gameworld-Controllers)
@@ -35,14 +36,13 @@ pip install primordial-x.x.x.zip
 
 ### Import
 ```py
-from primordial.lobby import Lobby
+from primordial import Lobby
 ```
 
 ### Create a lobby object
-> **Note:** For a guide on how to use proxies see http://docs.python-requests.org/en/master/user/advanced/#proxies
 
 ```py
-lobby = Lobby(proxies={})
+lobby = Lobby()
 ```
 
 ### Authenticate
@@ -69,7 +69,23 @@ gameworld.reports.getLastReports.params
 response = gameworld.reports.getLastReports(params={'collection': ' ', 'start': 0, 'count': 0, 'filter': [], 'alsoGetTotalNumber': False})
 ```
 
+### Customize HttpClient
+> **Note:** For a guide on how to use proxies see http://docs.python-requests.org/en/master/user/advanced/#proxies
 
+By default `Lobby` object use `HttpClient` object that have this settings:
+* `headers` = `{'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0'}`
+* `timeout` = `20.0`
+
+if you want to customize your own settings, you can do
+```py
+from primordial import HttpClient
+from primordial import Lobby
+
+client = HttpClient(proxies={}, headers={}, timeout=5.0, ...)
+
+lobby = Lobby(client=client)
+```
+This customized settings will be used everytime `HttpClient` sent a requests.
 
 # Controllers
 
@@ -321,3 +337,6 @@ response = gameworld.reports.getLastReports(params={'collection': ' ', 'start': 
 > A list of unique possible values for the 'names' param can be found in dev/cache_params.py
 >
 > Please note that where a value contains an int, it should be treated as an id and replaced where relevant
+
+---
+> **disclaimer:** please note that this is a research project. i am by no means responsible for any usage of this tool. use on your own behalf. i am also not responsible if your accounts get banned due to extensive use of this tool.
