@@ -11,6 +11,7 @@ Travian 5 API Client Framework
 	* [Create a lobby object](#Create-a-lobby-object)
 	* [Authenticate](#Authenticate)
 	* [Connect to a gameworld](#Connect-to-a-gameworld)
+		* [Connect to a gameworld as dual or sitter](#Connect-to-a-gameworld-as-dual-or-sitter)
 	* [Explore](#Explore)
 	* [Customize HttpClient](#Customize-HttpClient)
 * [Controllers](#Controllers)
@@ -53,6 +54,11 @@ lobby.authenticate(email=' ', password=' ')
 ### Connect to a gameworld
 ```py
 gameworld = lobby.connect_to_gameworld(gameworld_id=0, gameworld_name=' ')
+```
+
+#### Connect to a gameworld as dual or sitter
+```py
+gameworld = lobby.connect_to_gameworld(avatar_id=0, gameworld_name= ' ')
 ```
 
 ### Explore
