@@ -6,6 +6,7 @@ Travian 5 API Client Framework
 
 * [Installation](#Installation)
 	* [Building from zip](#Building-from-zip)
+	* [Using PIP](#Using-PIP)
 * [Usage](#Usage)
 	* [Import](#Import)
 	* [Create a lobby object](#Create-a-lobby-object)
@@ -31,6 +32,11 @@ Travian 5 API Client Framework
 python setup.py sdist --formats=zip
 cd dist
 pip install primordial-x.x.x.zip
+```
+
+### Using PIP
+```sh
+pip install git+https://github.com/didadadida93/primordial.git
 ```
 
 ## Usage
