@@ -63,12 +63,8 @@ class Lobby:
     def connect_to_gameworld(self, gameworld_name, gameworld_id=None, avatar_id=None):
         """ Authenticates and returns a gameworld object """
 
-        gameworld = Gameworld(self.client)
-        gameworld.authenticate(
-            gameworld_name=gameworld_name,
-            gameworld_id=gameworld_id,
-            avatar_id=avatar_id,
-        )
+        gameworld = Gameworld(self.client, gameworld_name, gameworld_id, avatar_id)
+        gameworld.authenticate()
         return gameworld
 
     def post(self, controller, action, params={}):
