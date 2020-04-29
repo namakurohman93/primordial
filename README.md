@@ -64,7 +64,7 @@ gameworld = lobby.connect_to_gameworld(gameworld_id=0, gameworld_name=' ')
 
 #### Connect to a gameworld as dual or sitter
 ```py
-gameworld = lobby.connect_to_gameworld(avatar_id=0, gameworld_name= ' ')
+gameworld = lobby.connect_to_gameworld(avatar_id=0, gameworld_name=' ')
 ```
 
 ### Explore
@@ -82,13 +82,13 @@ response = gameworld.reports.getLastReports(params={'collection': ' ', 'start': 
 ```
 
 ### Customize HttpClient
-> **Note:** For a guide on how to use proxies see http://docs.python-requests.org/en/master/user/advanced/#proxies
-
 By default `Lobby` object use `HttpClient` object that have this settings:
 * `headers` = `{'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0'}`
 * `timeout` = `20.0`
+* `cookies` = `requests.cookies.RequestsCookieJar`
+* `proxies` = `None`
 
-if you want to customize your own settings, you can do
+if you want to customize with your own settings, you can do
 ```py
 from primordial import HttpClient
 from primordial import Lobby
@@ -97,7 +97,8 @@ client = HttpClient(proxies={}, headers={}, timeout=5.0, ...)
 
 lobby = Lobby(client=client)
 ```
-This customized settings will be used everytime `HttpClient` sent a requests.
+This customized settings will be used everytime `HttpClient` sent a requests.  
+> **Note:** For a guide on how to use proxies see http://docs.python-requests.org/en/master/user/advanced/#proxies
 
 # Controllers
 
