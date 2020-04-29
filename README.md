@@ -59,12 +59,12 @@ lobby.authenticate(email=' ', password=' ')
 
 ### Connect to a gameworld
 ```py
-gameworld = lobby.connect_to_gameworld(gameworld_id=0, gameworld_name=' ')
+gameworld = lobby.connect_to_gameworld(gameworld_name=' ', gameworld_id=0)
 ```
 
 #### Connect to a gameworld as dual or sitter
 ```py
-gameworld = lobby.connect_to_gameworld(avatar_id=0, gameworld_name=' ')
+gameworld = lobby.connect_to_gameworld(gameworld_name=' ', avatar_id=0)
 ```
 
 ### Explore
@@ -97,7 +97,6 @@ client = HttpClient(proxies={}, headers={}, timeout=5.0, ...)
 
 lobby = Lobby(client=client)
 ```
-This customized settings will be used everytime `HttpClient` sent a requests.  
 > **Note:** For a guide on how to use proxies see http://docs.python-requests.org/en/master/user/advanced/#proxies
 
 # Controllers
