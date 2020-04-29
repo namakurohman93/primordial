@@ -28,10 +28,12 @@ from .controllers.gameworld import premiumFeature
 
 
 class Gameworld:
-    def __init__(self, client):
+    def __init__(self, client, gameworld_name, gameworld_id=None, avatar_id=None):
+        self.gameworld_api = f'{URL.GameworldAPI}'.format(gameworld_name.lower())
+        self.gameworld_name = gameworld_name
+        self.gameworld_id = gameworld_id
+        self.avatar_id = avatar_id
         self.client = client
-        self.config = dict()
-        self.gameworld_api = f'{URL.GameworldAPI}'
         # Controllers
         self.map = map.Map(post_handler=self.post)
         self.hero = hero.Hero(post_handler=self.post)
@@ -63,37 +65,26 @@ class Gameworld:
         else:
             return True
 
-    def authenticate(self, gameworld_name, gameworld_id=None, avatar_id=None):
+    def authenticate(self):
         """ Authenticates with the gameworld """
 
-        self.gameworld_api = self.gameworld_api.format(gameworld_name.lower())
-
-        if gameworld_id:
+        if self.gameworld_id:
             r = self.client.get(
-                url=URL.MellonURL.join_gameworld.format(gameworld_id),
+                url=URL.MellonURL.join_gameworld.format(self.gameworld_id),
                 params={'msid': self.msid, 'msname': 'msid'},
             )
 
-        if avatar_id:
+        if self.avatar_id:
             r = self.client.get(
-                url=URL.MellonURL.join_as_guest.format(avatar_id),
+                url=URL.MellonURL.join_as_guest.format(self.avatar_id),
                 params={'msid': self.msid, 'msname': 'msid'},
             )
 
         token = re.search(r'token=([\w]*)&msid', r.text).group(1)
 
-        r = self.client.get(
-            url=URL.GameworldAPI.login.format(gameworld_name.lower()),
+        self.client.get(
+            url=URL.GameworldAPI.login.format(self.gameworld_name.lower()),
             params={'token': token, 'msid': self.msid, 'msname': 'msid'}
-        )
-        # add travian config
-        self.config.update(
-            json.loads(
-                re.search(
-                    r'Travian.Config = ({\"feature[\s\w\S\W]*);Travian.Config.worldRadius',
-                    r.text,
-                ).group(1)
-            )
         )
 
     def post(self, controller, action, params={}):
@@ -135,7 +126,7 @@ class Gameworld:
 
     @property
     def player_id(self):
-        return int(self.decoded_session['id'])
+        return self.decoded_session['id']
 
     @property
     def session(self):
