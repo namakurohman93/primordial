@@ -99,8 +99,8 @@ class Gameworld:
             [
                 self.gameworld_api,
                 urllib.parse.urlencode({
-                    'controller': controller,
-                    'action': action
+                    'c': controller,
+                    'a': action
                 })
             ]
         )
