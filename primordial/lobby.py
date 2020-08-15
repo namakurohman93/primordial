@@ -74,7 +74,11 @@ class Lobby:
             'params': params,
             'session': self.session,
         }
-        return self.client.post(url=URL.LobbyAPI.index, json=payload).json()
+        r = self.client.post(url=URL.LobbyAPI.index, json=payload)
+        r.raise_for_status()
+
+        return r.json()
+
 
     @property
     def session(self):
