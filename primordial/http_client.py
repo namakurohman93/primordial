@@ -26,6 +26,7 @@ class HttpClient:
                 proxies=proxies,
                 hooks=hooks,
                 **kwargs) as r:
+            r.raise_for_status()
             return r
 
     def post(self, url, **kwargs):

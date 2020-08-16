@@ -107,10 +107,7 @@ class Gameworld:
 
         t = f'{time.time():.3f}'.replace('.', '')
 
-        r = self.client.post(url=url + f'&t{t}', json=payload)
-        r.raise_for_status()
-
-        return r.json()
+        return self.client.post(url=url + f'&t{t}', json=payload).json()
 
     @property
     def msid(self):
